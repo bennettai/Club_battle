@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <title>Sketch Battle</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body class="player">
+  <form id="join-view" class="join-view">
+    <h1>Sketch Battle</h1>
+    <label for="code" class="muted">Room code from the big screen</label>
+    <input id="code" maxlength="4" autocomplete="off" autocapitalize="characters" spellcheck="false" required>
+    <div class="slot-buttons">
+      <button type="submit" class="p1-btn" value="1">Player 1</button>
+      <button type="submit" class="p2-btn" value="2">Player 2</button>
+    </div>
+    <p id="join-error" class="error"></p>
+  </form>
+
+  <div id="draw-view" class="draw-view hidden">
+    <div class="draw-bar">
+      <span id="me"></span>
+      <span class="prompt" id="prompt"></span>
+      <span class="timer" id="timer"></span>
+    </div>
+    <div class="canvas-wrap">
+      <canvas id="pad"></canvas>
+      <div id="overlay" class="overlay">Waiting for the host to start…</div>
+    </div>
+    <div class="toolbar">
+      <button data-tool="pen" data-size="4" class="active">Pen</button>
+      <button data-tool="pen" data-size="12">Thick pen</button>
+      <button data-tool="eraser" data-size="28">Eraser</button>
+      <button id="clear-btn">Clear</button>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/play.js"></script>
+</body>
+</html>
