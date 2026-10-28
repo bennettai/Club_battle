@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sketch Battle</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main class="host">
+    <form id="pin-form" class="pin-form hidden">
+      <input id="pin" type="password" placeholder="Host PIN" autocomplete="off">
+      <button type="submit">Open host screen</button>
+    </form>
+    <p id="pin-error" class="error" style="text-align:center"></p>
+
+    <div id="host-view" class="hidden">
+      <header>
+        <div>
+          <h1>Sketch Battle</h1>
+          <div id="scoreline" class="scoreline"></div>
+        </div>
+        <div class="join-info">
+          <div class="muted">Players join at <strong id="join-url"></strong></div>
+          <div class="code" id="room-code">····</div>
+        </div>
+      </header>
+
+      <div class="lobby-players">
+        <span id="pill-1" class="player-pill p1">Player 1</span>
+        <span id="pill-2" class="player-pill p2">Player 2</span>
+      </div>
+
+      <section class="stage">
+        <div class="label" id="stage-label">Waiting for players</div>
+        <div class="prompt" id="stage-prompt"></div>
+        <div class="timer" id="stage-timer"></div>
+      </section>
+
+      <section id="results" class="results hidden">
+        <div class="result-card" id="card-1">
+          <strong class="p1">Player 1</strong>
+          <img alt="Player 1's drawing">
+          <div class="score"></div>
+          <div class="reason"></div>
+          <div class="badge"></div>
+        </div>
+        <div class="result-card" id="card-2">
+          <strong class="p2">Player 2</strong>
+          <img alt="Player 2's drawing">
+          <div class="score"></div>
+          <div class="reason"></div>
+          <div class="badge"></div>
+        </div>
+      </section>
+
+      <p id="host-error" class="error" style="text-align:center"></p>
+
+      <div class="controls">
+        <button id="start-btn">Start round</button>
+        <button id="retry-btn" class="hidden">Retry judging</button>
+        <button id="reset-btn" class="secondary">Reset scores</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/host.js"></script>
+</body>
+</html>

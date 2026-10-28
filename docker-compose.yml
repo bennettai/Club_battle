@@ -1,0 +1,12 @@
+services:
+  sketch-battle:
+    build: ./ai-sketch-guess
+    env_file: ./ai-sketch-guess/.env
+    environment:
+      PORT: "3000"
+    ports:
+      - "3100:3000"
+    # Lets the container reach Ollama running on the same server (JUDGE_PROVIDER=ollama)
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: unless-stopped
