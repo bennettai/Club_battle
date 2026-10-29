@@ -1,0 +1,19 @@
+# Python bytecode and local environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# DVC-managed model working copy (track its .dvc metadata in Git)
+/doodle_cnn.pt
+
+# Incomplete download files
+*.part
+
+# Test code and generated test artifacts
+/test/
+/tests/
+/src/test/
+.pytest_cache/
+.coverage
+htmlcov/
