@@ -1,0 +1,10 @@
+# Ignore local environments, caches, tests, and partial downloads during DVC scans.
+.venv/
+venv/
+3.12/
+__pycache__/
+.pytest_cache/
+.coverage
+htmlcov/
+src/test/
+*.part
