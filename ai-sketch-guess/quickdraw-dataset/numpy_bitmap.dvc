@@ -1,0 +1,6 @@
+outs:
+- md5: d4eea9c8300bd81aea8f4bc2b6d53b58.dir
+  size: 1050759152
+  nfiles: 10
+  hash: md5
+  path: numpy_bitmap

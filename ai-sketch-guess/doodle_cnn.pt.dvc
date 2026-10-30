@@ -1,0 +1,5 @@
+outs:
+- md5: f1cd24f38f80f19630023dde61a1b7b9
+  size: 1566325
+  hash: md5
+  path: doodle_cnn.pt

@@ -1,0 +1,12 @@
+
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+3.12/
+/doodle_cnn.pt
+/quickdraw-dataset/numpy_bitmap/
+*.part
+.pytest_cache/
+.coverage
+htmlcov/
